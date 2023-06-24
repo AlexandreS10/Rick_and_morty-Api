@@ -22,17 +22,13 @@ function filtrarPersonagens(pagina, nome = "") {
 
       personagens.forEach(function (item) {
         listaPersonagens.innerHTML += ` 
-        <div class="card" style="width: 18rem;">
-            <img src="${item.image}"class="card-img-top">
-          <div class="card-body">
-            <p class="p-lista"><strong>Nome: </strong><strong style="color:rgb(21, 105, 21)">${item.name}</strong></p>
-            <p class="p-lista"><strong>Gênero: </strong>${item.gender}</p>   
-            <p class="p-lista"><strong>Status: </strong>${item.status}</p>
-            <p class="p-lista"><strong>Espécie: </strong>${item.species}</p>
-            <p class="p-lista"><strong>Origem: </strong>${item.origin.name}</p>
-            <p class="p-lista"><strong>Localização: </strong>${item.location.name}</p>
-            <p class="p-lista"><strong>Aparece em: </strong>${item.episode.length} episódios</p>
+        <div class="row">
+          <div class="col-6">
+            <div class="card" style="width: 10rem;">
+              <img src="${item.image}"class="card-img-top">
+            </div>
           </div>
+           <div class="col-6"></div>
         </div>
     `;
     
