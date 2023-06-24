@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    background-color: white;
+}
+.container-fluid{
+text-align: center;
+
+}
+.fundo {
+    background-image: url('../images/FUNDO_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    position: relative;
+  }
+
+h1{ 
+    color: rgb(16, 110, 16);
+}
+.logo{
+    width:150px;
+    height:80px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    opacity: 60%;
+  }
+  .dev {
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+  }
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(12, 143, 12);
+
+   
+}

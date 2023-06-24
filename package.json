@@ -1,0 +1,18 @@
+{
+  "name": "Rick_and_morty-Api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AlexandreS10/Rick_and_morty-Api.git",
+  "author": "AlexandreS10 <alexandres10santos@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/js/listagem.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sucrase": "^3.32.0"
+  }
+}
