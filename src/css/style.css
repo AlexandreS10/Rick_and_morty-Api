@@ -26,6 +26,11 @@ margin-left: 30px;
     height: 1800px;
     position: relative;
   }
+  p {
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 
 h1{ 
     color: rgb(16, 110, 16);

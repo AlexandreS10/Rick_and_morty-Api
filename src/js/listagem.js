@@ -25,7 +25,7 @@ function filtrarPersonagens(pagina, nome = "") {
         listaPersonagens.innerHTML += ` 
         <div class="col-lg-3">
             <button class="card "data-bs-toggle="modal" data-bs-target="#${modalId}" >
-              <img src="${item.image}"class="card-img-top; width:200px">
+              <img src="${item.image}"class="card-img-top;"style="height:200px">
             </button>
         </div>
         <div class="modal fade" id="${modalId}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
