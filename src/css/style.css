@@ -2,15 +2,19 @@
     margin: 0;
     padding: 0;
 }
-
-.btn{
-    background-color: white;
+.botaoPagina {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(21, 105, 21);
 }
 .container-fluid{
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-between
+justify-content: space-between;
+grid-row-gap: 2rem;
+margin-left: 30px;
 
 
 }
@@ -29,6 +33,7 @@ h1{
 .logo{
     width:150px;
     height:80px;
+    animation: Animation 4s ease-in-out infinite;
 }
 
 .info {
@@ -50,6 +55,60 @@ footer{
     justify-content: center;
     align-items: center;
     background-color:rgb(12, 143, 12);
+  
+}
 
-   
+@keyframes Animation {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes text-focus-in-out {
+  0% {
+    filter: blur(0px);
+    opacity: 0.09;
+  }
+  10% {
+    filter: blur(0px);
+    opacity: 0.2;
+  }
+  20% {
+    filter: blur(0px);
+    opacity: 0.4;
+  }
+  30% {
+    filter: blur(0px); 
+    opacity: 0.6;
+  }
+  40% {
+  filter: blur(0px);
+    opacity: 0.8;
+  }
+  50% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  60% {
+    filter: blur(0px);
+    opacity: 0.8;
+  }
+  70% {
+    filter: blur(0px);
+    opacity: 0.6;
+  }
+  80% {
+    filter: blur(0px);
+    opacity: 0.4;
+  }
+  90% {
+    filter: blur(0px);
+    opacity: 0.2;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 0.09;
+  }
 }

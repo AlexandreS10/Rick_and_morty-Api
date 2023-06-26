@@ -23,20 +23,29 @@
         </h1>
         <div class="input-group mb-3">
           <input id="input-busca" type="text" class="form-control" placeholder="Pesquise">
-          <button class="input-group-text " id="basic-addon2"><img src="../images/search.svg" alt="lupa"></button>
+          <button class="input-group-text " onclick="filtrarPersonagens()" id="basic-addon2"><img
+              src="../images/search.svg" alt="lupa"></button>
         </div>
       </div>
       <div style="display: flex; justify-content: flex-end">
-        <img src="../images/personagens.png" style="width: 150px;" alt="personagens">
+        <img src="../images/personagens.png" style="width: 150px; animation: text-focus-in-out 4s infinite;"
+          alt="personagens">
       </div>
     </nav>
   </header>
   <main>
     <div class="fundo">
-      <div class="container-fluid "id="container-dos-cards">
+      <div class="container-fluid " id="container-dos-cards">
+        <div class="row h-100" style="align-items: center;"></div>
+      </div>
+      <div class="container" style="display:flex; justify-content: center;">
+        <div class="row">
+          <div class="col-12">
+            <div class="pagination" id="paginacao"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="pagination" id="paginacao"></div>
   </main>
   <footer>
     <div class="info">

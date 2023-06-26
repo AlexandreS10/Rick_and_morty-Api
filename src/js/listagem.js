@@ -20,16 +20,33 @@ function filtrarPersonagens(pagina, nome = "") {
 
       listaPersonagens.innerHTML = "";
 
-      personagens.forEach(function (item) {
+      personagens.forEach(function (item, index) {
+        const modalId = `staticBackdrop${index}`;
         listaPersonagens.innerHTML += ` 
-        <div class="row">
-          <div class="col-6">
-            <div class="card" style="width: 10rem;">
-              <img src="${item.image}"class="card-img-top">
-            </div>
-          </div>
-           <div class="col-6"></div>
+        <div class="col-lg-3">
+            <button class="card "data-bs-toggle="modal" data-bs-target="#${modalId}" >
+              <img src="${item.image}"class="card-img-top; width:200px">
+            </button>
         </div>
+        <div class="modal fade" id="${modalId}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h1 class="modal-title fs-5" id="staticBackdropLabel">Informações</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+             <p class="p-lista"><strong>Nome: </strong><strong style="color:rgb(21, 105, 21)">${item.name}</strong></p>
+             <p class="p-lista"><strong>Gênero: </strong>${item.gender}</p>   
+             <p class="p-lista"><strong>Status: </strong>${item.status}</p>
+             <p class="p-lista"><strong>Espécie: </strong>${item.species}</p>
+             <p class="p-lista"><strong>Origem: </strong>${item.origin.name}</p>
+             <p class="p-lista"><strong>Localização: </strong>${item.location.name}</p>
+             <p class="p-lista"><strong>Aparece em: </strong>${item.episode.length} episódios</p>
+             </div>
+           </div>
+         </div>
+       </div>
     `;
     
       });
@@ -39,6 +56,7 @@ function filtrarPersonagens(pagina, nome = "") {
       if (informacoes.prev) {
         const botaoAnterior = document.createElement("button");
         botaoAnterior.textContent = "Anterior";
+        botaoAnterior.classList.add("botaoPagina");
         botaoAnterior.addEventListener("click", function () {
           filtrarPersonagens(informacoes.prev.split("=")[1], nome);
         });
@@ -48,6 +66,7 @@ function filtrarPersonagens(pagina, nome = "") {
       if (informacoes.next) {
         const botaoProximo = document.createElement("button");
         botaoProximo.textContent = "Próximo";
+        botaoProximo.classList.add("botaoPagina");
         botaoProximo.addEventListener("click", function () {
           filtrarPersonagens(informacoes.next.split("=")[1], nome);
         });
@@ -116,9 +135,4 @@ botaoBusca.addEventListener("click", function () {
   const termoBusca = inputBusca.value;
   filtrarPersonagens(paginaAtual, termoBusca);
 });
-inputBusca.addEventListener("input", function () {
-  const termoBusca = inputBusca.value;
-  filtrarPersonagens(paginaAtual, termoBusca);
-});
-
 filtrarPersonagens(paginaAtual);
